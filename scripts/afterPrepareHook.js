@@ -94,7 +94,7 @@ function processConsoleOptions_cordova_54(consoleOptions) {
   // if building for release - save that and exit
   if (consoleOptions.hasOwnProperty('release')) {
     parsedOptions.isRelease = consoleOptions.release;
-    return parsedOptions;
+    // return parsedOptions;
   }
 
   // search for plugin specific build options
@@ -173,10 +173,10 @@ module.exports = function(ctx) {
 
   // if we are running build with --release option - do nothing
   var consoleOptions = processConsoleOptions(ctx);
-  if (consoleOptions.isRelease) {
-    printLog('Building for release, not changing config.xml');
-    return;
-  }
+  // if (consoleOptions.isRelease) {
+  //   printLog('Building for release, not changing config.xml');
+  //   return;
+  // }
 
   // read plugin preferences from config.xml
   chcpXmlOptions = chcpConfigXmlReader.readOptions(ctx);
